@@ -1,53 +1,57 @@
-📌 Language School Management System (Python + SQLAlchemy)
-🎯 Overview
-این پروژه یک سیستم مدیریت آموزشگاه زبان است که با Python, SQLAlchemy ORM و SQLite ساخته شده.
-هدف پروژه مدیریت زبان‌آموزان، دوره‌ها، جلسات باقی‌مانده و سیستم لاگین است.
-معماری پروژه لایه‌ای طراحی شده تا توسعه و نگهداری آن ساده باشد.
+Language School Management System
+Overview
+A lightweight and modular management system for a language school, built with Python, SQLAlchemy ORM, and SQLite.
+The project handles student registration, course tracking (IELTS & Speaking), remaining sessions, reporting, login authentication, and backup of deleted records.
 
-🏛 Architecture
-پروژه از سه لایه اصلی تشکیل شده:
+Architecture
+The project follows a clean layered structure:
 
-Models → تعریف جداول دیتابیس با SQLAlchemy
+Models – SQLAlchemy ORM database tables
 
-DAL (Data Access Layer) → پیاده‌سازی Repository برای CRUD
+DAL (Data Access Layer) – Repository pattern for CRUD and queries
 
-BL (Business Logic) → منطق تجاری و مدیریت داده‌ها
+BL (Business Logic) – Application logic and validation
 
-این ساختار باعث می‌شود پروژه تمیز، قابل‌توسعه و استاندارد باشد.
+Main Application – Runs the system and connects layers together
 
-✨ Features
-ثبت‌نام زبان‌آموز
+This separation makes the project easy to maintain, extend, and scale.
 
-ویرایش و حذف اطلاعات
+Features
+Add, update, delete, and search students
 
-جستجوی داینامیک
+Track IELTS and Speaking sessions
 
-گزارش‌گیری بر اساس تاریخ و بازه زمانی
+Store remaining sessions
 
-مدیریت جلسات IELTS و Speaking
+Backup deleted records
 
-سیستم لاگین و تشخیص مدیر
+Login system with admin support
 
-سیستم بک‌آپ برای بازیابی اطلاعات حذف‌شده
+Reports by date and date range
 
-🚀 How to Run
+Dynamic search and dynamic update
+
+Automatic database creation
+
+Run the Project
 bash
 pip install sqlalchemy
 python main.py
-دیتابیس به‌صورت خودکار ساخته می‌شود.
+Future Improvements
+REST API using FastAPI
 
-📈 Future Improvements
-اضافه کردن API با FastAPI
+Desktop UI (PyQt / Tkinter)
 
-طراحی UI با PyQt یا Tkinter
+Unit tests (pytest)
 
-اضافه کردن Unit Test
+PDF/Excel report export
 
-سیستم گزارش‌گیری PDF/Excel
+Role-based access control
 
-نقش‌های کاربری (Admin / Staff)
+Attendance tracking
 
-سیستم حضور و غیاب و کاهش خودکار جلسات
+Course scheduling and teacher assignment
 
-👩‍💻 Author
-Zahra
+Author
+Zahra  
+Python Developer | SQLAlchemy | ML & IoT
