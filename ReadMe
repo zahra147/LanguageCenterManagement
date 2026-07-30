@@ -1,205 +1,58 @@
-📌 README — Language School Management System (Python + SQLAlchemy)
+📌 Language School Management System (Python + SQLAlchemy)
 🎯 Overview
-This project is a Language School Management System built with Python, SQLAlchemy ORM, and SQLite.
-The system manages:
+این پروژه یک سیستم مدیریت آموزشگاه زبان است که با Python, SQLAlchemy ORM و SQLite ساخته شده.
+هدف پروژه مدیریت زبان‌آموزان، دوره‌ها، جلسات باقی‌مانده و سیستم لاگین است.
+معماری پروژه لایه‌ای طراحی شده تا توسعه و نگهداری آن ساده باشد.
 
-Student registration
+🏛 Architecture
+پروژه از سه لایه اصلی تشکیل شده:
 
-IELTS & Speaking course tracking
+Models → تعریف جداول دیتابیس با SQLAlchemy
 
-Remaining session management
+DAL (Data Access Layer) → پیاده‌سازی Repository برای CRUD
 
-Backup system
+BL (Business Logic) → منطق تجاری و مدیریت داده‌ها
 
-User login & admin authentication
+این ساختار باعث می‌شود پروژه تمیز، قابل‌توسعه و استاندارد باشد.
 
-Full CRUD operations
+✨ Features
+ثبت‌نام زبان‌آموز
 
-Clean multi-layer architecture (DAL, BL, Models)
+ویرایش و حذف اطلاعات
 
-The project is designed with a clean, scalable, and maintainable structure, suitable for real-world educational centers.
+جستجوی داینامیک
 
-🏛 Project Architecture
-Code
-📦 LanguageSchoolApp
- ┣ 📂 BE
- ┃ ┗ 📄 Setting.py
- ┣ 📂 DAL
- ┃ ┗ 📄 Repository.py
- ┣ 📂 BL
- ┃ ┗ 📄 blPersonal.py
- ┣ 📂 Models
- ┃ ┗ 📄 Personal.py
- ┣ 📄 main.py
- ┗ 📄 README.md
-✔ BE (Back-End Settings)
-Contains database configuration and connection string.
+گزارش‌گیری بر اساس تاریخ و بازه زمانی
 
-✔ DAL (Data Access Layer)
-Implements a clean, reusable Repository Pattern with:
+مدیریت جلسات IELTS و Speaking
 
-Add
+سیستم لاگین و تشخیص مدیر
 
-Read / ReadById
-
-Update (Dynamic)
-
-Delete
-
-Search (Dynamic)
-
-Reports
-
-Login
-
-Duplicate checking
-
-Backup operations
-
-All methods use SQLAlchemy Session Management with proper error handling.
-
-✔ BL (Business Logic Layer)
-Contains business rules and validation logic.
-BL does not directly access the database; it communicates only through the Repository.
-
-✔ Models
-SQLAlchemy ORM models for:
-
-Personal
-
-BakPersonal
-
-Login
-
-All models follow clean conventions and include __repr__ for debugging.
-
-🧩 Features
-🔹 Student Management
-Register new students
-
-Update student information
-
-Delete student records
-
-Search by any field
-
-Track IELTS & Speaking sessions
-
-Track remaining sessions
-
-🔹 Backup System
-Every deleted student can be stored in BakPersonal for recovery.
-
-🔹 Reporting
-Report by exact date
-
-Report by date range
-
-Dynamic search filters
-
-🔹 Authentication
-Login system
-
-Admin flag (isAdmin)
-
-Secure credential checking
-
-🔹 Clean Architecture
-Separation of concerns
-
-Reusable repository
-
-Scalable BL layer
-
-ORM-based models
-
-Easy to extend
-
-🛠 Technologies Used
-Technology	Purpose
-Python 3.x	Main programming language
-SQLAlchemy ORM	Database mapping & CRUD
-SQLite	Lightweight database
-Repository Pattern	Clean DAL architecture
-Layered Architecture	Maintainability & scalability
-
-
-📂 Database Models
-Personal
-Stores student information and course progress.
-
-BakPersonal
-Backup table for deleted students.
-
-Login
-User authentication & admin access.
+سیستم بک‌آپ برای بازیابی اطلاعات حذف‌شده
 
 🚀 How to Run
 bash
 pip install sqlalchemy
 python main.py
-Database will be automatically created using:
+دیتابیس به‌صورت خودکار ساخته می‌شود.
 
-python
-Base.metadata.create_all(engine)
-📈 Future Improvements (برای استخدام عالیه)
-این بخش نشان می‌دهد تو نگاه مهندسی داری و پروژه را قابل رشد طراحی کردی.
+📈 Future Improvements
+اضافه کردن API با FastAPI
 
-🔹 1. Add REST API (FastAPI)
-Student CRUD endpoints
+طراحی UI با PyQt یا Tkinter
 
-Login & JWT authentication
+اضافه کردن Unit Test
 
-Reporting endpoints
+سیستم گزارش‌گیری PDF/Excel
 
-🔹 2. Add UI (PyQt5 or Tkinter)
-Registration form
+نقش‌های کاربری (Admin / Staff)
 
-Search panel
-
-Reports dashboard
-
-🔹 3. Add Unit Tests (pytest)
-DAL tests
-
-BL tests
-
-Model validation tests
-
-🔹 4. Add Logging System
-Error logs
-
-Activity logs
-
-Admin audit logs
-
-🔹 5. Add Excel/PDF Export
-Export reports
-
-Export student lists
-
-🔹 6. Add Role-Based Access
-Admin
-
-Staff
-
-Read-only users
-
-🔹 7. Add Attendance Tracking
-Session attendance
-
-Automatic session decrement
-
-🔹 8. Add Course Scheduling
-Calendar
-
-Teacher assignment
-
-Class capacity
-
+سیستم حضور و غیاب و کاهش خودکار جلسات
+Technology,Purpose
+Python 3.x,Main programming language
+SQLAlchemy ORM,Database mapping & CRUD
+SQLite,Lightweight database
+Repository Pattern,Clean DAL architecture
+Layered Architecture,Maintainability & scalability
 👩‍💻 Author
-Zahra  
-Freelance ML & IoT Developer
-Python | SQLAlchemy | Qt/QML | Machine Learning
-
-فقط بگو کدوم بخش رو می‌خوای تا کاملش کنم.
+Zahra
