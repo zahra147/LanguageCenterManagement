@@ -48,11 +48,6 @@ python main.py
 نقش‌های کاربری (Admin / Staff)
 
 سیستم حضور و غیاب و کاهش خودکار جلسات
-Technology,Purpose
-Python 3.x,Main programming language
-SQLAlchemy ORM,Database mapping & CRUD
-SQLite,Lightweight database
-Repository Pattern,Clean DAL architecture
-Layered Architecture,Maintainability & scalability
+
 👩‍💻 Author
 Zahra
