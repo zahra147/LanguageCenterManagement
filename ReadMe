@@ -1,0 +1,205 @@
+📌 README — Language School Management System (Python + SQLAlchemy)
+🎯 Overview
+This project is a Language School Management System built with Python, SQLAlchemy ORM, and SQLite.
+The system manages:
+
+Student registration
+
+IELTS & Speaking course tracking
+
+Remaining session management
+
+Backup system
+
+User login & admin authentication
+
+Full CRUD operations
+
+Clean multi-layer architecture (DAL, BL, Models)
+
+The project is designed with a clean, scalable, and maintainable structure, suitable for real-world educational centers.
+
+🏛 Project Architecture
+Code
+📦 LanguageSchoolApp
+ ┣ 📂 BE
+ ┃ ┗ 📄 Setting.py
+ ┣ 📂 DAL
+ ┃ ┗ 📄 Repository.py
+ ┣ 📂 BL
+ ┃ ┗ 📄 blPersonal.py
+ ┣ 📂 Models
+ ┃ ┗ 📄 Personal.py
+ ┣ 📄 main.py
+ ┗ 📄 README.md
+✔ BE (Back-End Settings)
+Contains database configuration and connection string.
+
+✔ DAL (Data Access Layer)
+Implements a clean, reusable Repository Pattern with:
+
+Add
+
+Read / ReadById
+
+Update (Dynamic)
+
+Delete
+
+Search (Dynamic)
+
+Reports
+
+Login
+
+Duplicate checking
+
+Backup operations
+
+All methods use SQLAlchemy Session Management with proper error handling.
+
+✔ BL (Business Logic Layer)
+Contains business rules and validation logic.
+BL does not directly access the database; it communicates only through the Repository.
+
+✔ Models
+SQLAlchemy ORM models for:
+
+Personal
+
+BakPersonal
+
+Login
+
+All models follow clean conventions and include __repr__ for debugging.
+
+🧩 Features
+🔹 Student Management
+Register new students
+
+Update student information
+
+Delete student records
+
+Search by any field
+
+Track IELTS & Speaking sessions
+
+Track remaining sessions
+
+🔹 Backup System
+Every deleted student can be stored in BakPersonal for recovery.
+
+🔹 Reporting
+Report by exact date
+
+Report by date range
+
+Dynamic search filters
+
+🔹 Authentication
+Login system
+
+Admin flag (isAdmin)
+
+Secure credential checking
+
+🔹 Clean Architecture
+Separation of concerns
+
+Reusable repository
+
+Scalable BL layer
+
+ORM-based models
+
+Easy to extend
+
+🛠 Technologies Used
+Technology	Purpose
+Python 3.x	Main programming language
+SQLAlchemy ORM	Database mapping & CRUD
+SQLite	Lightweight database
+Repository Pattern	Clean DAL architecture
+Layered Architecture	Maintainability & scalability
+
+
+📂 Database Models
+Personal
+Stores student information and course progress.
+
+BakPersonal
+Backup table for deleted students.
+
+Login
+User authentication & admin access.
+
+🚀 How to Run
+bash
+pip install sqlalchemy
+python main.py
+Database will be automatically created using:
+
+python
+Base.metadata.create_all(engine)
+📈 Future Improvements (برای استخدام عالیه)
+این بخش نشان می‌دهد تو نگاه مهندسی داری و پروژه را قابل رشد طراحی کردی.
+
+🔹 1. Add REST API (FastAPI)
+Student CRUD endpoints
+
+Login & JWT authentication
+
+Reporting endpoints
+
+🔹 2. Add UI (PyQt5 or Tkinter)
+Registration form
+
+Search panel
+
+Reports dashboard
+
+🔹 3. Add Unit Tests (pytest)
+DAL tests
+
+BL tests
+
+Model validation tests
+
+🔹 4. Add Logging System
+Error logs
+
+Activity logs
+
+Admin audit logs
+
+🔹 5. Add Excel/PDF Export
+Export reports
+
+Export student lists
+
+🔹 6. Add Role-Based Access
+Admin
+
+Staff
+
+Read-only users
+
+🔹 7. Add Attendance Tracking
+Session attendance
+
+Automatic session decrement
+
+🔹 8. Add Course Scheduling
+Calendar
+
+Teacher assignment
+
+Class capacity
+
+👩‍💻 Author
+Zahra  
+Freelance ML & IoT Developer
+Python | SQLAlchemy | Qt/QML | Machine Learning
+
+فقط بگو کدوم بخش رو می‌خوای تا کاملش کنم.
